@@ -1,17 +1,24 @@
-import logo from './logo.svg';
+//import logo from './logo.png';
+import React from 'react';
 import './App.css';
+import {withAuthenticator} from '@aws-amplify/ui-react';
 
-function App() {
+import '@aws-amplify/ui-react/styles.css';
+
+import Cases from "./components/Cases";
+import Navbar from "./components/Navbar";
+
+function App({signOut, user}) {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <body>
-        <h2>USCIS Status</h2>
-      </body>
+
+      <Navbar user={user} signOut={signOut}/>
+      <Cases user={user}/>
+
     </div>
   );
 }
 
-export default App;
+
+export default withAuthenticator(App);
