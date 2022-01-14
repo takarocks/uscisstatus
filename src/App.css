@@ -59,7 +59,7 @@ h1 {
 .table {
   display:table;
   width: 100%;
-  padding: 4px;
+  padding: 0px;
 }
 .header {
   display:table-header-group;
@@ -93,26 +93,34 @@ h1 {
 
 .cell-casetype {
   display:table-cell;
-  width: 80px;
+  width: 54px;
   text-align: left;
 }
 
 .cell-date{
+  display:table-cell;
   width: 90px;
+  padding-right: 5px;
 }
 
 .cell-status{
+  display:table-cell;
   color:#1f78c0;
+}
+
+.cell-click{
+  display:table-cell;
+  width: 22px;
 }
 
 
 .content {
   margin: auto;
-  width: 96%;
+  padding-left: 14px;
 }
 
 .entry {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
 }
 
 .history-entry{
@@ -129,7 +137,8 @@ h1 {
 }
 
 .history-description{
-  color:dimgray;
+  color:rgb(100, 100, 100);
+  padding: 0px 5px 0px 95px;
 }
 
 h1 {
