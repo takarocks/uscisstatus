@@ -1,51 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getUser = /* GraphQL */ `
-  query GetUser($id: ID!) {
-    getUser(id: $id) {
-      id
-      username
-      email
-      case {
-        items {
-          id
-          caseid
-          casetype
-          email
-          createdAt
-          updatedAt
-          userCaseId
-          owner
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listUsers = /* GraphQL */ `
-  query ListUsers(
-    $filter: ModelUserFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        username
-        email
-        case {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      nextToken
-    }
-  }
-`;
 export const getUscisCase = /* GraphQL */ `
   query GetUscisCase($id: ID!, $caseid: ID!) {
     getUscisCase(id: $id, caseid: $caseid) {
@@ -55,7 +10,6 @@ export const getUscisCase = /* GraphQL */ `
       email
       createdAt
       updatedAt
-      userCaseId
       owner
     }
   }
@@ -84,7 +38,6 @@ export const listUscisCases = /* GraphQL */ `
         email
         createdAt
         updatedAt
-        userCaseId
         owner
       }
       nextToken
@@ -152,7 +105,6 @@ export const uscisCasesByCaseID = /* GraphQL */ `
         email
         createdAt
         updatedAt
-        userCaseId
         owner
       }
       nextToken

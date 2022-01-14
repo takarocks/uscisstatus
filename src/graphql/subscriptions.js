@@ -1,78 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateUser = /* GraphQL */ `
-  subscription OnCreateUser($username: String) {
-    onCreateUser(username: $username) {
-      id
-      username
-      email
-      case {
-        items {
-          id
-          caseid
-          casetype
-          email
-          createdAt
-          updatedAt
-          userCaseId
-          owner
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateUser = /* GraphQL */ `
-  subscription OnUpdateUser($username: String) {
-    onUpdateUser(username: $username) {
-      id
-      username
-      email
-      case {
-        items {
-          id
-          caseid
-          casetype
-          email
-          createdAt
-          updatedAt
-          userCaseId
-          owner
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteUser = /* GraphQL */ `
-  subscription OnDeleteUser($username: String) {
-    onDeleteUser(username: $username) {
-      id
-      username
-      email
-      case {
-        items {
-          id
-          caseid
-          casetype
-          email
-          createdAt
-          updatedAt
-          userCaseId
-          owner
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const onCreateUscisCase = /* GraphQL */ `
   subscription OnCreateUscisCase($owner: String) {
     onCreateUscisCase(owner: $owner) {
@@ -82,7 +10,6 @@ export const onCreateUscisCase = /* GraphQL */ `
       email
       createdAt
       updatedAt
-      userCaseId
       owner
     }
   }
@@ -96,7 +23,6 @@ export const onUpdateUscisCase = /* GraphQL */ `
       email
       createdAt
       updatedAt
-      userCaseId
       owner
     }
   }
@@ -110,7 +36,6 @@ export const onDeleteUscisCase = /* GraphQL */ `
       email
       createdAt
       updatedAt
-      userCaseId
       owner
     }
   }
