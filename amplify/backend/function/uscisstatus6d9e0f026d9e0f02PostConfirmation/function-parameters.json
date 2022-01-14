@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "uscisstatus6d9e0f026d9e0f02",
+  "functionName": "uscisstatus6d9e0f026d9e0f02PostConfirmation",
+  "resourceName": "uscisstatus6d9e0f026d9e0f02PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "/Users/i303726/.nvm/versions/node/v16.13.1/lib/node_modules/@aws-amplify/cli/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "uscisstatus6d9e0f026d9e0f02PostConfirmation",
+  "skipEdit": true,
+  "enableCors": false
+}

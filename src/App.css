@@ -1,0 +1,178 @@
+body {
+  text-align: center;
+  font-style: "Roboto Sans";
+
+}
+
+.App-logo {
+  height: 8vmin;
+  pointer-events: none;
+}
+/* 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 60s linear;
+  }
+} 
+*/
+
+.App-header {
+  background-color: #1f78c0;
+  min-height: 6vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.history {
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
+
+}
+
+.history-title {
+  font-weight: bold;
+}
+
+.table {
+  display:table;
+  width: 100%;
+  padding: 4px;
+}
+.header {
+  display:table-header-group;
+  font-weight:bold;
+  text-align: left;
+}
+.rowGroup {
+  display:table-row-group;
+}
+.row {
+  display:table-row;
+}
+
+.cell {
+  display:table-cell;
+  text-align: left;
+}
+
+.cell-2 {
+  display:table-cell;
+  text-align: left;
+  width:90px;
+  font-weight: bold;
+}
+
+.cell-caseid {
+  display:table-cell;
+  width: 120px;
+  text-align: left;
+}
+
+.cell-casetype {
+  display:table-cell;
+  width: 80px;
+  text-align: left;
+}
+
+.cell-date{
+  width: 90px;
+}
+
+.cell-status{
+  color:#1f78c0;
+}
+
+
+.content {
+  margin: auto;
+  width: 96%;
+}
+
+.entry {
+  margin-bottom: 10px;
+}
+
+.history-entry{
+  margin-bottom: 6px;
+}
+
+.history-status{
+  color:#1f78c0;
+}
+
+.history-date{
+  width: 90px;
+  padding-right: 10px;
+}
+
+.history-description{
+  color:dimgray;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav div {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 17px;
+}
+  
+.topnav-centered {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.topnav-right button {
+    width: 80px;
+}
+
+.mainnav {
+  float: left;
+  padding: 6px 14px;
+  position: relative;
+  top: 0%;
+}    

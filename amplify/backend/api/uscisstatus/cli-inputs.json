@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "uscisstatus",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/i303726/SAPDevelop/github/uscisstatus/amplify/backend/api/uscisstatus/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authuscisstatus6d9e0f026d9e0f02"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
+  }
+}

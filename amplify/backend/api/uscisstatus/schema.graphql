@@ -1,0 +1,25 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+#input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type UscisCase @model 
+  @auth(rules: [
+    { allow: groups, groups: ["Admin"]},
+    { allow: owner, operations: [create, read, update]}
+  ])
+  {
+    id: ID! @primaryKey(sortKeyFields: ["caseid"])
+    caseid: ID! @index(name: "byCaseID", queryField: "uscisCasesByCaseID", sortKeyFields: ["id"])
+    casetype: String!
+    email: AWSEmail!
+  }
+
+type UscisStatus @model
+  @auth(rules: [
+    { allow: groups, groups: ["Admin"]},
+    { allow: groups, groups: ["Users"], operations: [create, read, update]}
+  ]){
+    caseid: ID! @primaryKey
+    laststatus: String @index(name: "byLastStatus", queryField: "uscisStatusesByLastStatus", sortKeyFields: ["caseid"])
+    history: [String]
+  }
