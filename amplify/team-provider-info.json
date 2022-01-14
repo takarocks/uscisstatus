@@ -19,7 +19,7 @@
       "function": {
         "uscisstatus6d9e0f026d9e0f02PostConfirmation": {
           "deploymentBucketName": "amplify-amplifyf6e7e31474784-staging-165323-deployment",
-          "s3Key": "amplify-builds/uscisstatus6d9e0f026d9e0f02PostConfirmation-307376665975384f5071-build.zip"
+          "s3Key": "amplify-builds/uscisstatus6d9e0f026d9e0f02PostConfirmation-4e6e4545685034783373-build.zip"
         }
       }
     }
