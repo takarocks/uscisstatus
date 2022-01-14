@@ -30,14 +30,13 @@ function History(props) {
                 </div>
     
                 <div className="entry">
-                    <div className="history-title">Short History:</div>
+                    <div className="history-title">Summary:</div>
      
                     {
                         props.history.map(h => (
                             <div key={JSON.parse(h).date} className="rowGroup">
                                 <div className="row">
                                     <div className="cell cell-date">{JSON.parse(h).date.substring(0,10)}</div>
-                                    <div className="cell cell-separator">:</div>
                                     <div className="cell cell-status">{JSON.parse(h).status}</div>
                                 </div>
                             </div>
@@ -52,9 +51,11 @@ function History(props) {
                         props.history.map(h => (
                             <div key={JSON.parse(h).date} className="entry">
                                 <div className="history-entry">
-                                    <span className="history-date">{JSON.parse(h).date.substring(0,10)}</span>
-                                    <span className="history-status">{JSON.parse(h).status}</span>
-                                    <div className="history-description">{JSON.parse(h).description}</div>
+                                  <div className="row">
+                                      <div className="cell cell-date">{JSON.parse(h).date.substring(0,10)}</div>
+                                      <div className="cell cell-status">{JSON.parse(h).status}</div>
+                                  </div>
+                                  <div className="history-description">{JSON.parse(h).description}</div>
                                 </div>
                             </div>
                         ))
@@ -111,21 +112,31 @@ function Cases({user}) {
 
     {/* My Cases */}
     return (
-      <div style={{marginBottom: 10}}>
+      <div>
 
         <div className="content">
           <div className="table">
             <div className="header">
+              <div className="cell-click">&nbsp;</div>
               <div className="cell-caseid">Case ID</div>
-              <div className="cell-casetype">Case Type</div>
+              <div className="cell-casetype">Type</div>
               <div className="cell-email">&nbsp;</div>
             </div>
 
             {
               usciscases.map(usciscase => (
               <div key={usciscase.caseid} className="rowGroup">
-                <div  className="row">
-                  <div className="cell-caseid" onClick={() => fetchUscisHistory(usciscase.caseid)}>{usciscase.caseid}</div>
+                <div className="row">
+                  <div className="cell-click" onClick={() => fetchUscisHistory(usciscase.caseid)}>
+                    <input
+                      type="radio"
+                      name="caseid"
+                      value={usciscase.caseid}
+                      checked={history.caseid === usciscase.caseid}
+//                      onChange={fetchUscisHistory(usciscase.caseid)}
+                      />
+                  </div>
+                  <div className="cell-caseid">{usciscase.caseid}</div>
                   <div className="cell-casetype">{usciscase.casetype}</div>
                   <div className="cell-email">&nbsp;</div>
                </div>
@@ -135,11 +146,14 @@ function Cases({user}) {
 
             <div className="rowGroup">
               <div className="row">
+                <div className="cell-click">
+                  &nbsp;
+                </div>
                 <div className="cell-caseid">
                   <input 
                   className="cell-caseid"
                   onChange={e => setFormData({ ...formData, 'caseid': e.target.value})}
-                  placeholder="(e.g. SRC...)"
+                  placeholder="e.g. SRC..."
                   value={formData.caseid}
                   />
                 </div>
@@ -147,12 +161,12 @@ function Cases({user}) {
                   <input 
                   className="cell-casetype"
                   onChange={e => setFormData({ ...formData, 'casetype': e.target.value})}
-                  placeholder="(e.g. I485)"
+                  placeholder="e.g. I485"
                   value={formData.casetype}
                   />
                 </div>
                 <div className="cell">
-                <button onClick={createUscisCase}>Watch Case</button>
+                <button onClick={createUscisCase}>Watch</button>
                 </div>
               </div>
             </div>
