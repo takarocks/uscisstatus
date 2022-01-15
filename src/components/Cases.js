@@ -17,6 +17,13 @@ const initialHistory = {
     laststatus: ''
 }
 
+function isoToLocal(datestr){
+    let isodate = new Date(datestr);
+    let localOffset = isodate.getTimezoneOffset() * 60000;
+    let localdate = new Date(isodate - localOffset);
+    return localdate.toISOString().substring(0,10);
+}
+
 function History(props) {
 
     if (props.history) {
@@ -36,13 +43,12 @@ function History(props) {
                         props.history.map(h => (
                             <div key={JSON.parse(h).date} className="rowGroup">
                                 <div className="row">
-                                    <div className="cell cell-date">{JSON.parse(h).date.substring(0,10)}</div>
+                                    <div className="cell cell-date">{isoToLocal(JSON.parse(h).date)}</div>
                                     <div className="cell cell-status">{JSON.parse(h).status}</div>
                                 </div>
                             </div>
                         ))
                     }
-    
                 </div>
                 <div className="entry">
                     <div className="history-title">History:</div>
@@ -52,7 +58,7 @@ function History(props) {
                             <div key={JSON.parse(h).date} className="entry">
                                 <div className="history-entry">
                                   <div className="row">
-                                      <div className="cell cell-date">{JSON.parse(h).date.substring(0,10)}</div>
+                                      <div className="cell cell-date">{isoToLocal(JSON.parse(h).date)}</div>
                                       <div className="cell cell-status">{JSON.parse(h).status}</div>
                                   </div>
                                   <div className="history-description">{JSON.parse(h).description}</div>
